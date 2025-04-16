@@ -3,7 +3,7 @@ package datastruct.ac;/*
  *文件名: AC
  *创建者: YANGTIAN
  *创建时间:2025/4/16 13:42
- *描述: TODO
+ *描述: 实现AC自动机
 
  */
 
@@ -12,7 +12,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.sql.SQLOutput;
 import java.util.*;
 import java.util.Map.Entry;
 
