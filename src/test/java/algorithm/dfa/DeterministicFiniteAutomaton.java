@@ -1,4 +1,4 @@
-package datastruct.dfa;
+package algorithm.dfa;
 /*
  *项目名: sensitive_word_processing
  *文件名: DFA
@@ -92,15 +92,21 @@ public class DeterministicFiniteAutomaton {
     }
 
     public static void main(String[] args) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
 
-        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_processing\\src\\test\\java\\datastruct\\sensitive_words.txt";
+//        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_10.txt";
+//        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_100.txt";
+        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_100_cf.txt";
+//        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_1000.txt";
+//        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_10000.txt";
+//        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_50000.txt";
+//        String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_100000.txt";
 
         // 初始化过滤器
         DeterministicFiniteAutomaton filter = new DeterministicFiniteAutomaton(keywordsFile);
 
         // 测试文本
-        String text = "新疆骚乱，苹果发布会停止了吗，饭菜涨价了吗";
+        String text = "新疆骚乱，苹果发布会停止了吗，饭菜涨价了吗刘少奇m叔叔撒谎撒户撒哈呼告诉啊哈是吓抬m";
 
         // 执行过滤
         Map<String, List<Integer>> result = filter.filter(text);
@@ -117,7 +123,7 @@ public class DeterministicFiniteAutomaton {
             }
         }
 
-        System.out.printf("耗时：%dms%n", System.currentTimeMillis() - start);
+        System.out.printf("耗时：%dns%n", System.nanoTime() - start);
     }
 
     // 格式化位置信息

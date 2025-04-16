@@ -1,6 +1,6 @@
 //  AC自动机算法
 
-package datastruct.ac;
+package algorithm.ac;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

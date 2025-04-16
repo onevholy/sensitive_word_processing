@@ -1,4 +1,4 @@
-package datastruct.ac;
+package algorithm.ac;
 
 import java.util.ArrayList;
 import java.util.HashMap;

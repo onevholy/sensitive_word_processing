@@ -1,4 +1,4 @@
-package datastruct.ac;/*
+package algorithm.ac;/*
  *项目名: sensitive_word_process
  *文件名: AC
  *创建者: YANGTIAN
@@ -119,10 +119,16 @@ public class AhoCorasickAutomation {
     }
 
     public static void main(String[] args) {
-        long startTime = System.currentTimeMillis();
+        long startTime = System.nanoTime();
         try {
-            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_processing\\src\\test\\java\\datastruct\\sensitive_words.txt";
-            String testText = "新疆骚乱，苹果发布会停止了吗，饭菜涨价了吗";
+//            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_10.txt";
+//            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_100.txt";
+            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_100_cf.txt";
+//            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_1000.txt";
+//            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_10000.txt";
+//            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_50000.txt";
+//            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_100000.txt";
+            String testText = "新疆骚乱，苹果发布会停止了吗，饭菜涨价了吗刘少奇m叔叔撒谎撒户撒哈呼告诉啊哈是吓抬m";
 
             AhoCorasickAutomation ac = new AhoCorasickAutomation(keywordsFile);
             Map<String, List<Integer>> result = ac.find(testText);
@@ -139,7 +145,7 @@ public class AhoCorasickAutomation {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.printf("耗时：%dms%n", System.currentTimeMillis() - startTime);
+        System.out.printf("耗时：%dns%n", System.nanoTime() - startTime);
     }
 
     private static String formatPositions(String text, String word, List<Integer> positions) {
