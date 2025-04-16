@@ -1,5 +1,12 @@
-
 package datastruct.dfa;
+/*
+ *项目名: sensitive_word_processing
+ *文件名: DFA
+ *创建者: YANGTIAN
+ *创建时间:2025/4/16 11:33
+ *描述: 运用DFA算法进行敏感词匹配
+
+ */
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -93,8 +100,7 @@ public class DeterministicFiniteAutomaton {
         DeterministicFiniteAutomaton filter = new DeterministicFiniteAutomaton(keywordsFile);
 
         // 测试文本
-        String text = "这是一个测试文本，包含敏感词如色情、赌博和暴力内容。"
-                + "请勿传播违法信息，拒绝赌博活动！";
+        String text = "新疆骚乱，苹果发布会停止了吗，饭菜涨价了吗";
 
         // 执行过滤
         Map<String, List<Integer>> result = filter.filter(text);

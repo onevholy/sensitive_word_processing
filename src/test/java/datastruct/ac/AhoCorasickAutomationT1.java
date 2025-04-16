@@ -46,7 +46,7 @@ public class AhoCorasickAutomationT1 {
 
         String text = "asasasasassasas"; // 待匹配的文本
 
-        AhoCorasickAutomation aca = new AhoCorasickAutomation(target);
+        AhoCorasickAutomationEN aca = new AhoCorasickAutomationEN(target);
         HashMap<String, List<Integer>> result = aca.find(text);
 
         System.out.println("文本内容: " + text);
