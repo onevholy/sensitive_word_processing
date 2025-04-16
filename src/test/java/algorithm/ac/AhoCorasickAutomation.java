@@ -128,7 +128,7 @@ public class AhoCorasickAutomation {
 //            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_10000.txt";
 //            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_50000.txt";
 //            String keywordsFile = "E:\\Code\\J_project\\sensitive_word_process\\src\\test\\java\\data\\sensitive_words_100000.txt";
-            String testText = "新疆骚乱，苹果发布会停止了吗，饭菜涨价了吗刘少奇m叔叔撒谎撒户撒哈呼告诉啊哈是吓抬m";
+            String testText = "新疆骚乱，苹果发布会停止了吗，饭菜涨价了吗";
 
             AhoCorasickAutomation ac = new AhoCorasickAutomation(keywordsFile);
             Map<String, List<Integer>> result = ac.find(testText);
